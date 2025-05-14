@@ -4,14 +4,16 @@
 
 CRGB leds[NUM];
 
+int GR=0;
+int BA=0;
+int RD=255;
 
 void setup() {
    FastLED.addLeds<WS2812,6>(leds,NUM);
   // put your setup code here, to run once:
 
 }
-void loop() 
-{
+void loop() {
   // put your main code here, to run repeatedly:
  for(int BB=0; BB<=20; BB++)
  {
@@ -21,5 +23,7 @@ void loop()
  }
     
 FastLED.show();
-delay(100);
+delay(10);
+GR = (GR + 10) % 256;
+RD = (RD + 10) % 256;
 }
