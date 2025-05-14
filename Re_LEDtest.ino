@@ -23,7 +23,7 @@ void loop()
     leds[BB].g=BB*GRA*10;
     leds[BB].b=BB*GRA*15;
     }
+   astLED.show();
+   delay(100);
  }   
-FastLED.show();
-delay(100);
 }
